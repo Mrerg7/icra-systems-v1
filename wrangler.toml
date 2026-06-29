@@ -1,0 +1,9 @@
+name = "icra-systems-v1"
+compatibility_date = "2026-06-01"
+workers_dev = false
+
+[assets]
+directory = "./dist"
+
+[vars]
+SITE_URL = "https://icra.systems"

@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #f8fafc;
+}
+
+/* Glass card effect */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+/* Premium badge gradient */
+.premium-badge {
+  background: linear-gradient(90deg, #0D9488, #14B8A6);
+  color: white;
+  font-size: 0.75rem;
+  padding-left: 0.875rem;
+  padding-right: 0.875rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Healthcare gradient hero */
+.healthcare-gradient {
+  background: linear-gradient(135deg, #0F172A 0%, #134E4A 100%);
+}
+
+/* Primary CTA button */
+.cta-primary {
+  background: linear-gradient(135deg, #0D9488, #0F766E);
+  transition: all 0.3s ease;
+}
+
+.cta-primary:hover {
+  background: linear-gradient(135deg, #14B8A6, #0D9488);
+  box-shadow: 0 0 30px rgba(13, 148, 136, 0.3);
+  transform: translateY(-1px);
+}
+
+/* Secondary CTA button */
+.cta-secondary {
+  border: 1px solid rgba(13, 148, 136, 0.3);
+  transition: all 0.3s ease;
+}
+
+.cta-secondary:hover {
+  border-color: #0D9488;
+  background: rgba(13, 148, 136, 0.06);
+}
+
+/* Modern card hover effect */
+.modern-card {
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modern-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+/* Value prop hover */
+.value-prop {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Sticky CTA bar */
+.sticky-cta {
+  background: rgba(15, 23, 42, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(13, 148, 136, 0.2);
+}

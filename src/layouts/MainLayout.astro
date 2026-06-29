@@ -1,0 +1,177 @@
+---
+import '../styles/global.css';
+
+export interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  noindex?: boolean;
+}
+
+const {
+  title = "icra.systems — Premium Domain for ICRA Systems | Healthcare Compliance Platform",
+  description = "Acquire icra.systems — the modern .systems domain for ICRA compliance platforms, monitoring systems, and digital tools. The perfect brand for software, SaaS, and integrated systems that streamline Infection Control Risk Assessment in healthcare construction.",
+  image = "https://imagedelivery.net/-sPAUAWeA405NiWJ0SNIQA/ccb64e0e-1b98-4243-8d2d-d111a277bb00/public",
+  noindex = false,
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const siteUrl = 'https://icra.systems';
+const siteName = 'ICRA Systems';
+const contactEmail = 'sales@desertrich.com';
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': `${siteUrl}/#website`,
+      url: siteUrl,
+      name: siteName,
+      description,
+      inLanguage: 'en-US',
+    },
+    {
+      '@type': 'WebPage',
+      '@id': `${canonicalURL}#webpage`,
+      url: canonicalURL,
+      name: title,
+      description,
+      isPartOf: { '@id': `${siteUrl}/#website` },
+      inLanguage: 'en-US',
+      primaryImageOfPage: {
+        '@type': 'ImageObject',
+        url: image,
+      },
+    },
+    {
+      '@type': 'Product',
+      name: `${siteName} — Premium Domain Name`,
+      description: 'The modern .systems domain for ICRA compliance platforms, monitoring systems, and digital tools. Category-defining digital real estate for the infection control risk assessment niche.',
+      url: siteUrl,
+      image: image,
+      category: 'Domain Name',
+      brand: {
+        '@type': 'Brand',
+        name: siteName,
+      },
+      offers: {
+        '@type': 'Offer',
+        url: canonicalURL,
+        availability: 'https://schema.org/InStock',
+        priceCurrency: 'USD',
+        price: '35000.00',
+        priceSpecification: {
+          '@type': 'PriceSpecification',
+          price: '35000.00',
+          priceCurrency: 'USD',
+          minPrice: '35000.00',
+          maxPrice: '175000.00',
+        },
+        seller: {
+          '@type': 'Organization',
+          name: 'Desert Rich',
+          email: contactEmail,
+        },
+        hasMerchantReturnPolicy: {
+          '@type': 'MerchantReturnPolicy',
+          applicableCountry: 'US',
+          returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted',
+          merchantReturnDays: 0,
+          name: 'No Returns',
+          description: 'Due to the nature of digital domain name assets, returns are not applicable after transfer.',
+        },
+        shippingDetails: {
+          '@type': 'OfferShippingDetails',
+          shippingRate: {
+            '@type': 'MonetaryAmount',
+            value: 0,
+            currency: 'USD',
+          },
+          deliveryTime: {
+            '@type': 'ShippingDeliveryTime',
+            handlingTime: {
+              '@type': 'QuantitativeValue',
+              minValue: 1,
+              maxValue: 5,
+              unitCode: 'DAY',
+            },
+            transitTime: {
+              '@type': 'QuantitativeValue',
+              minValue: 0,
+              maxValue: 0,
+              unitCode: 'DAY',
+            },
+          },
+          shippingDestination: {
+            '@type': 'DefinedRegion',
+            addressCountry: 'US',
+          },
+        },
+      },
+      review: {
+        '@type': 'Review',
+        reviewRating: {
+          '@type': 'Rating',
+          ratingValue: '5',
+          bestRating: '5',
+        },
+        author: {
+          '@type': 'Organization',
+          name: 'Desert Rich',
+        },
+      },
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: '5',
+        bestRating: '5',
+        ratingCount: 1,
+        reviewCount: 1,
+      },
+    },
+  ],
+};
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+
+  <!-- Canonical -->
+  <link rel="canonical" href={canonicalURL} />
+
+  {noindex && <meta name="robots" content="noindex" />}
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonicalURL} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={image} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content={siteName} />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={image} />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+</head>
+<body class="bg-icra-surface text-slate-900 font-sans antialiased">
+  <slot />
+</body>
+</html>

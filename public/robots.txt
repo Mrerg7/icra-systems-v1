@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://icra.systems/sitemap-index.xml

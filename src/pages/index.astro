@@ -1,0 +1,449 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+
+const contactEmail = "sales@desertrich.com";
+const subjectLine = "Acquisition Inquiry — icra.systems";
+const mailtoLink = `mailto:${contactEmail}?subject=${encodeURIComponent(subjectLine)}`;
+
+const marketStats = [
+  { value: "$30B+", label: "Annual U.S. hospital & clinic construction spend", detail: "Ongoing construction and renovation projects create continuous demand for better digital tools to manage ICRA compliance efficiently.", icon: "hospital" },
+  { value: "Manual & Fragmented", label: "Current ICRA processes are outdated", detail: "Most projects still rely on paper checklists, static documents, and manual pressure monitoring — creating gaps, delays, and compliance risk.", icon: "file" },
+  { value: "High Demand", label: "Digital ICRA tools are in strong demand", detail: "Hospitals, GCs, and contractors are actively looking for modern platforms that can digitize ICRA workflows, monitoring, and documentation.", icon: "laptop" },
+];
+
+const brandPillars = [
+  { title: "Digital ICRA Planning & Permits", desc: "Modern digital tools for creating, managing, and approving ICRA plans and permits with built-in best practices and classification guidance.", icon: "tasks" },
+  { title: "Real-Time Monitoring Systems", desc: "Integrated monitoring for negative air pressure, with alerts, logging, and dashboards that give project teams and infection preventionists live visibility.", icon: "gauge" },
+  { title: "Digital Checklists & Documentation", desc: "Smart daily checklists, automated logging, photo documentation, and centralized records that improve compliance and simplify audits.", icon: "clipboard" },
+  { title: "Analytics & Compliance Reporting", desc: "Dashboards, trend analysis, and automated reporting that help teams demonstrate compliance and identify improvement opportunities.", icon: "chart" },
+];
+
+const domainValues = [
+  { title: ".systems TLD Advantage", desc: "The .systems extension is modern and instantly communicates technology, platforms, and integrated solutions. It positions the brand as forward-thinking and purpose-built for digital ICRA tools.", icon: "globe" },
+  { title: "Category Leadership Potential", desc: "The name positions you as the central brand for ICRA systems — whether as a compliance platform, monitoring system, or integrated workflow solution.", icon: "trophy" },
+  { title: "Clean & Memorable", desc: "Short, professional, and easy to communicate. Performs exceptionally well for a SaaS website, marketing materials, and when explaining the platform to hospitals and contractors.", icon: "link" },
+  { title: "Strong Search & SEO Potential", desc: "Excellent alignment with searches such as \"ICRA system\", \"ICRA platform\", \"healthcare construction compliance software\", and related high-intent B2B terms.", icon: "search" },
+  { title: "Scalable & Future-Proof", desc: "The brand supports growth from a single focused tool to a full suite of ICRA compliance, monitoring, and documentation systems.", icon: "refresh" },
+  { title: "Multiple High-Value Revenue Models", desc: "SaaS subscriptions • Enterprise licensing • Per-project usage • White-label solutions for larger contractors or health systems • Training + platform bundles.", icon: "rocket" },
+];
+
+const businessModels = [
+  { title: "Digital ICRA Compliance Platform", desc: "Build a comprehensive SaaS platform for ICRA planning, permitting, checklists, and documentation — replacing paper and spreadsheets.", icon: "tasks" },
+  { title: "Real-Time Monitoring System", desc: "Develop or integrate IoT/sensor-based negative air pressure monitoring with dashboards, alerts, and automated logging.", icon: "gauge" },
+  { title: "Mobile Field Tools", desc: "Create mobile apps for daily ICRA checklists, photo documentation, and real-time reporting from the job site.", icon: "mobile" },
+  { title: "Analytics & Reporting Suite", desc: "Build dashboards, compliance reports, and analytics that help hospitals and contractors demonstrate ICRA performance and improve over time.", icon: "chart" },
+];
+
+const buyerProfiles = [
+  { title: "SaaS & Platform Founders", desc: "Build the category-defining digital platform for ICRA planning, monitoring, and compliance in healthcare construction.", icon: "laptop" },
+  { title: "IoT & Monitoring Technology Companies", desc: "Develop real-time pressure monitoring and alert systems under a highly credible, category-owning brand.", icon: "gauge" },
+  { title: "Field Workflow & Mobile Tool Builders", desc: "Create mobile-first tools for daily ICRA checklists, documentation, and reporting on active construction sites.", icon: "mobile" },
+  { title: "Compliance & Analytics Companies", desc: "Build dashboards and reporting systems that help hospitals and contractors demonstrate ICRA performance.", icon: "chart" },
+  { title: "Existing HealthTech Companies", desc: "Expand into the ICRA niche or rebrand an existing compliance tool under a clear, purpose-built domain.", icon: "handshake" },
+  { title: "Strategic Investors & Acquirers", desc: "Acquire a modern, relevant .systems domain with clear commercial application in a growing regulated niche.", icon: "building" },
+];
+---
+
+<MainLayout>
+  <!-- ============================================ -->
+  <!-- NAVBAR                                       -->
+  <!-- ============================================ -->
+  <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+    <div class="max-w-screen-2xl mx-auto">
+      <div class="px-8 py-5 flex items-center justify-between">
+        <div class="flex items-center gap-x-3">
+          <!-- Logo -->
+          <div class="flex items-center gap-x-2.5">
+            <div class="w-9 h-9 bg-icra-teal rounded-2xl flex items-center justify-center shadow-inner">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.25">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+              </svg>
+            </div>
+            <div>
+              <span class="font-semibold tracking-tighter text-3xl">icra</span>
+              <span class="text-icra-teal font-semibold text-3xl">.systems</span>
+            </div>
+          </div>
+          <div class="premium-badge flex items-center gap-x-1.5 ml-1">
+            <svg class="w-2.5 h-2.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <span class="font-semibold tracking-[0.5px] text-[10px]">PREMIUM</span>
+          </div>
+        </div>
+
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+          <a href="#opportunity" class="text-slate-600 hover:text-slate-900 transition-colors">Opportunity</a>
+          <a href="#brand" class="text-slate-600 hover:text-slate-900 transition-colors">The Brand</a>
+          <a href="#why-domain" class="text-slate-600 hover:text-slate-900 transition-colors">Why This Domain</a>
+          <a href="#acquire" class="text-slate-600 hover:text-slate-900 transition-colors">Acquire</a>
+        </div>
+
+        <div class="flex items-center gap-x-3">
+          <a href={mailtoLink}
+             class="hidden md:block px-5 py-2.5 text-sm font-semibold bg-white border border-slate-300 hover:border-slate-400 text-slate-700 rounded-3xl transition-all active:scale-[0.985]">
+            Make an Offer
+          </a>
+          <a href={mailtoLink}
+             class="px-6 py-2.5 text-sm font-semibold bg-icra-teal hover:bg-icra-deep text-white rounded-3xl transition-all active:scale-[0.985] shadow-sm flex items-center gap-x-2">
+            <span>Inquire Now</span>
+          </a>
+
+          <!-- Mobile menu toggle -->
+          <button class="md:hidden w-10 h-10 flex items-center justify-center text-slate-600" id="mobile-menu-btn">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-4">
+      <div class="flex flex-col gap-y-3 text-sm font-medium">
+        <a href="#opportunity" class="py-1.5 text-slate-700">Opportunity</a>
+        <a href="#brand" class="py-1.5 text-slate-700">The Brand</a>
+        <a href="#why-domain" class="py-1.5 text-slate-700">Why This Domain</a>
+        <a href="#acquire" class="py-1.5 text-slate-700">Acquire</a>
+        <div class="pt-3 border-t">
+          <a href={mailtoLink}
+             class="block w-full py-3 text-center text-sm font-semibold bg-icra-teal text-white rounded-3xl">Inquire Now</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================ -->
+  <!-- HERO                                         -->
+  <!-- ============================================ -->
+  <header class="healthcare-gradient text-white">
+    <div class="max-w-screen-2xl mx-auto px-8 pt-16 pb-20 md:pt-20 md:pb-24">
+      <div class="max-w-4xl">
+        <div class="inline-flex items-center gap-x-2 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-3xl mb-6 border border-white/20">
+          <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse-slow"></div>
+          <span class="text-sm font-medium tracking-wide">EXCLUSIVELY AVAILABLE</span>
+        </div>
+
+        <h1 class="text-6xl md:text-7xl leading-[1.05] tracking-tighter font-semibold mb-4">
+          icra.systems
+        </h1>
+
+        <p class="max-w-3xl text-2xl md:text-3xl text-teal-100 tracking-tight mb-3">
+          The modern brand for ICRA Systems.
+        </p>
+
+        <p class="max-w-2xl text-lg text-teal-200/90 mb-9">
+          Own the .systems domain that positions you as the leader in digital ICRA compliance —
+          platforms, monitoring systems, digital permits, checklists, and integrated tools for healthcare construction.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href={mailtoLink}
+             class="group inline-flex items-center justify-center gap-x-3 px-8 py-4 bg-white text-teal-700 font-semibold text-lg rounded-3xl hover:bg-teal-50 active:bg-white transition-all shadow-xl shadow-black/10">
+            <span>Secure This Domain</span>
+            <svg class="w-5 h-5 group-active:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+
+          <a href="#opportunity"
+             class="inline-flex items-center justify-center gap-x-2 px-7 py-4 border border-white/30 hover:bg-white/10 text-white font-medium rounded-3xl transition-all text-lg">
+            <span>Explore the Opportunity</span>
+          </a>
+        </div>
+
+        <div class="mt-8 flex items-center gap-x-6 text-sm">
+          <div class="flex items-center -space-x-1">
+            <div class="w-6 h-6 bg-white/20 rounded-full border border-white/40"></div>
+            <div class="w-6 h-6 bg-white/20 rounded-full border border-white/40"></div>
+            <div class="w-6 h-6 bg-white/20 rounded-full border border-white/40"></div>
+          </div>
+          <span class="text-teal-200 text-sm">The platform brand modernizing Infection Control Risk Assessment</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================ -->
+  <!-- TRUST / STATS BAR                            -->
+  <!-- ============================================ -->
+  <div class="border-b border-slate-200 bg-white">
+    <div class="max-w-screen-2xl mx-auto px-8 py-5">
+      <div class="flex flex-wrap justify-center md:justify-between items-center gap-x-8 gap-y-4 text-center md:text-left">
+        <div class="flex items-center gap-x-3">
+          <svg class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          <span class="font-medium text-sm text-slate-600">.systems TLD — signals modern platform & technology</span>
+        </div>
+        <div class="flex items-center gap-x-3">
+          <svg class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          <span class="font-medium text-sm text-slate-600">Hospitals & contractors need better digital tools for ICRA compliance</span>
+        </div>
+        <div class="flex items-center gap-x-3">
+          <svg class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          <span class="font-medium text-sm text-slate-600">Digital ICRA systems reduce risk, paperwork, and inspection failures</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- THE OPPORTUNITY                              -->
+  <!-- ============================================ -->
+  <section id="opportunity" class="max-w-screen-2xl mx-auto px-8 pt-16 pb-12">
+    <div class="max-w-3xl mb-10">
+      <div class="uppercase tracking-[2px] text-icra-teal text-xs font-semibold mb-2">THE MARKET</div>
+      <h2 class="text-4xl font-bold tracking-tighter leading-tight">ICRA compliance is still largely manual, paper-based, and fragmented — creating major opportunity for modern systems.</h2>
+      <p class="mt-4 text-lg text-slate-600">Most ICRA processes today rely on spreadsheets, paper checklists, static PDFs, and manual monitoring. This creates inefficiency, documentation gaps, and increased risk during healthcare construction. Hospitals, general contractors, and specialty contractors are actively seeking digital platforms that can streamline ICRA planning, real-time monitoring, documentation, and compliance reporting. A well-designed ICRA system can significantly reduce risk, improve audit readiness, and create recurring value.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-5">
+      {marketStats.map((stat) => (
+        <div class="bg-white border border-slate-200 rounded-3xl p-7 modern-card">
+          <div class="flex justify-between items-start">
+            <div>
+              <div class="text-5xl font-semibold tracking-tighter text-slate-900">{stat.value}</div>
+              <div class="text-icra-teal font-medium mt-1">{stat.label}</div>
+            </div>
+            <div class="text-icra-teal-pale">
+              {stat.icon === 'hospital' && <svg class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>}
+              {stat.icon === 'file' && <svg class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>}
+              {stat.icon === 'laptop' && <svg class="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>}
+            </div>
+          </div>
+          <p class="text-sm text-slate-500 mt-5 leading-snug">{stat.detail}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- THE BRAND                                    -->
+  <!-- ============================================ -->
+  <section id="brand" class="bg-white border-y border-slate-200 py-16">
+    <div class="max-w-screen-2xl mx-auto px-8">
+      <div class="max-w-3xl mb-10">
+        <div class="uppercase tracking-[2px] text-icra-teal text-xs font-semibold mb-2">THE ICRA SYSTEMS BRAND</div>
+        <h2 class="text-4xl font-bold tracking-tighter leading-tight">What icra.systems represents.</h2>
+        <p class="mt-4 text-lg text-slate-600">This is the brand for the modern platform or system that digitizes and streamlines Infection Control Risk Assessment — bringing together planning, real-time monitoring, documentation, and compliance into one integrated solution.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+        {brandPillars.map((pillar) => (
+          <div class="bg-slate-50 border border-slate-100 rounded-3xl p-6 modern-card">
+            <div class="w-11 h-11 flex items-center justify-center bg-icra-teal-pale text-icra-teal rounded-2xl mb-5">
+              {pillar.icon === 'tasks' && <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>}
+              {pillar.icon === 'gauge' && <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>}
+              {pillar.icon === 'clipboard' && <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>}
+              {pillar.icon === 'chart' && <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>}
+            </div>
+            <h4 class="font-semibold text-lg tracking-tight mb-2">{pillar.title}</h4>
+            <p class="text-sm text-slate-600 leading-relaxed">{pillar.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- WHY THIS DOMAIN                              -->
+  <!-- ============================================ -->
+  <section id="why-domain" class="max-w-screen-2xl mx-auto px-8 py-16">
+    <div class="max-w-3xl mb-9">
+      <div class="uppercase tracking-[2px] text-icra-teal text-xs font-semibold mb-2">THE STRATEGIC ASSET</div>
+      <h2 class="text-4xl font-bold tracking-tighter leading-tight">Why icra.systems is a powerful brand for a platform or SaaS business.</h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+      {domainValues.map((item) => (
+        <div class="value-prop bg-white border border-slate-200 p-7 rounded-3xl modern-card">
+          <div class="flex items-center gap-x-3 mb-4">
+            <div class="text-icra-teal">
+              {item.icon === 'globe' && <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>}
+              {item.icon === 'trophy' && <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>}
+              {item.icon === 'link' && <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>}
+              {item.icon === 'search' && <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>}
+              {item.icon === 'refresh' && <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>}
+              {item.icon === 'rocket' && <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>}
+            </div>
+            <h4 class="font-semibold text-xl tracking-tight">{item.title}</h4>
+          </div>
+          <p class="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- BUSINESS MODELS (dark)                       -->
+  <!-- ============================================ -->
+  <section class="bg-slate-900 text-white py-16">
+    <div class="max-w-screen-2xl mx-auto px-8">
+      <div class="max-w-2xl mb-9">
+        <div class="text-teal-400 text-xs tracking-[2px] font-semibold mb-2">BUILD THE PLATFORM</div>
+        <h2 class="text-4xl tracking-tighter font-semibold">High-potential ways to activate icra.systems.</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+        {businessModels.map((model) => (
+          <div class="bg-white/5 hover:bg-white/10 border border-white/10 p-6 rounded-3xl transition-colors">
+            <div class="text-teal-400 mb-4">
+              {model.icon === 'tasks' && <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>}
+              {model.icon === 'gauge' && <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>}
+              {model.icon === 'mobile' && <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>}
+              {model.icon === 'chart' && <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>}
+            </div>
+            <h5 class="font-semibold mb-1.5 text-sm">{model.title}</h5>
+            <p class="text-sm text-white/70 leading-relaxed">{model.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- WHO IT'S PERFECT FOR                         -->
+  <!-- ============================================ -->
+  <section class="max-w-screen-2xl mx-auto px-8 py-16 border-b border-slate-200">
+    <div class="max-w-3xl">
+      <h2 class="text-4xl font-bold tracking-tighter leading-tight mb-3">Who should acquire icra.systems?</h2>
+      <p class="text-lg text-slate-600">This modern .systems domain is ideal for founders and companies ready to build the leading digital platform for ICRA compliance and monitoring.</p>
+    </div>
+
+    <div class="mt-8 grid md:grid-cols-3 gap-x-6 gap-y-4 text-sm">
+      {buyerProfiles.map((profile) => (
+        <div class="flex gap-x-4">
+          <div class="mt-1 text-icra-teal flex-shrink-0">
+            {profile.icon === 'laptop' && <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>}
+            {profile.icon === 'gauge' && <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>}
+            {profile.icon === 'mobile' && <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>}
+            {profile.icon === 'chart' && <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>}
+            {profile.icon === 'handshake' && <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>}
+            {profile.icon === 'building' && <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>}
+          </div>
+          <div>
+            <div class="font-semibold">{profile.title}</div>
+            <div class="text-slate-600 text-sm">{profile.desc}</div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- FINAL CTA / ACQUIRE                          -->
+  <!-- ============================================ -->
+  <section id="acquire" class="max-w-screen-2xl mx-auto px-8 py-20">
+    <div class="max-w-2xl mx-auto text-center">
+      <div class="inline-block premium-badge mb-4 text-sm">
+        <svg class="w-2.5 h-2.5 inline mr-1.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        EXCLUSIVE OPPORTUNITY
+      </div>
+
+      <h2 class="text-5xl tracking-tighter font-semibold mb-4">Own the platform brand for ICRA Systems.</h2>
+      <p class="text-xl text-slate-600 max-w-md mx-auto">icra.systems is available for acquisition. Secure the modern .systems domain that positions you as the leader in digital ICRA compliance and monitoring tools.</p>
+
+      <div class="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href={mailtoLink}
+           class="w-full sm:w-auto px-10 py-4 bg-icra-teal hover:bg-icra-deep transition-all text-white font-semibold text-lg rounded-3xl flex items-center justify-center gap-x-3 shadow-lg shadow-icra-teal/30">
+          <span>Submit Acquisition Inquiry</span>
+        </a>
+
+        <a href={mailtoLink}
+           class="w-full sm:w-auto px-8 py-4 border border-slate-300 hover:bg-slate-100 transition-all font-medium text-slate-700 rounded-3xl flex items-center justify-center gap-x-2">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          <span>Email {contactEmail}</span>
+        </a>
+      </div>
+
+      <div class="mt-8 text-xs text-slate-500 flex items-center justify-center gap-x-2">
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+        <span>Confidential inquiries • Professional escrow transfer • Fast closing available</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- STICKY MOBILE CTA                            -->
+  <!-- ============================================ -->
+  <div class="sticky-cta fixed bottom-0 left-0 right-0 z-50 sm:hidden px-4 py-3">
+    <a href={mailtoLink}
+       class="cta-primary w-full py-3 rounded-full text-white font-semibold text-sm flex items-center justify-center gap-2">
+      INQUIRE TO ACQUIRE — OWN THIS DOMAIN
+    </a>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- FOOTER                                       -->
+  <!-- ============================================ -->
+  <footer class="relative bg-slate-900 text-slate-400">
+    <div class="max-w-screen-2xl mx-auto px-8 py-16">
+      <!-- Footer CTA -->
+      <div class="text-center mb-12">
+        <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">
+          Domain Available for Acquisition
+        </h3>
+        <p class="text-white/55 text-sm sm:text-base mb-6 max-w-xl mx-auto">
+          icra.systems — The modern .systems domain for an ICRA compliance platform, monitoring system, or integrated digital solution. Serious, qualified inquiries welcome. Flexible transaction structures available — escrow-protected.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <a href={mailtoLink}
+             class="inline-flex items-center gap-2 px-8 py-3 rounded-full border border-icra-teal/40 hover:bg-icra-teal hover:text-white text-icra-teal-bright font-semibold text-sm transition-all duration-300">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            {contactEmail}
+          </a>
+          <a href={mailtoLink}
+             class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/20 hover:bg-white/5 text-white/70 font-medium text-sm transition-all duration-300">
+            Request Information Package
+            <svg class="w-3.5 h-3.5 text-icra-teal-bright" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="border-t border-white/10 pt-8">
+        <!-- Disclaimer -->
+        <div class="max-w-3xl mx-auto text-center">
+          <p class="text-[11px] sm:text-xs text-white/35 leading-relaxed mb-4">
+            This website is for demonstration and informational purposes only. It does not constitute an offer of services,
+            a commitment to deploy, or a guarantee of outcomes. All statistics, projections, and references to specific
+            technologies are based on publicly available information as of the date shown and are subject to change.
+          </p>
+          <p class="text-[11px] sm:text-xs text-white/25 font-mono">
+            &copy; {new Date().getFullYear()} icra.systems — Built with Astro + Cloudflare Workers Static Assets
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</MainLayout>
+
+<script>
+  // Mobile menu toggle
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    // Close mobile menu when a link is clicked
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  }
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        const navHeight = 72;
+        const elementPosition = target.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.scrollY - navHeight;
+        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+      }
+    });
+  });
+
+  console.log('%c[icra.systems] Domain acquisition landing page initialized.', 'color:#0D9488; font-size:9px');
+</script>
