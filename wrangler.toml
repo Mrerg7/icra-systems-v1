@@ -1,9 +1,14 @@
 name = "icra-systems-v1"
+main = "worker/index.js"
 compatibility_date = "2026-06-01"
 workers_dev = false
 
 [assets]
 directory = "./dist"
+binding = "ASSETS"
+run_worker_first = true
+not_found_handling = "404-page"
+html_handling = "auto-trailing-slash"
 
 [vars]
 SITE_URL = "https://icra.systems"

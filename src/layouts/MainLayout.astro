@@ -15,10 +15,15 @@ const {
   noindex = false,
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const siteUrl = 'https://icra.systems';
 const siteName = 'ICRA Systems';
 const contactEmail = 'sales@desertrich.com';
+
+let pathname = Astro.url.pathname;
+if (pathname !== '/' && !pathname.endsWith('/') && !pathname.includes('.')) {
+  pathname += '/';
+}
+const canonicalURL = new URL(pathname, Astro.site);
 
 const structuredData = {
   '@context': 'https://schema.org',
@@ -26,7 +31,7 @@ const structuredData = {
     {
       '@type': 'WebSite',
       '@id': `${siteUrl}/#website`,
-      url: siteUrl,
+      url: `${siteUrl}/`,
       name: siteName,
       description,
       inLanguage: 'en-US',
@@ -48,7 +53,7 @@ const structuredData = {
       '@type': 'Product',
       name: `${siteName} — Premium Domain Name`,
       description: 'The modern .systems domain for ICRA compliance platforms, monitoring systems, and digital tools. Category-defining digital real estate for the infection control risk assessment niche.',
-      url: siteUrl,
+      url: `${siteUrl}/`,
       image: image,
       category: 'Domain Name',
       brand: {
