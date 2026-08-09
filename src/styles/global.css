@@ -2,8 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  overflow-x: clip;
+}
+
 body {
   background: #f8fafc;
+  overflow-x: clip;
+  padding-bottom: env(safe-area-inset-bottom, 0);
 }
 
 /* Glass card effect */

@@ -1,3 +1,3 @@
+# Path-level fallback (host www→apex / http→https / index.html handled in worker/index.js)
 /index.html / 301
 /icrasystems.html / 301
-/sitemap-index.xml /sitemap-index.xml 200

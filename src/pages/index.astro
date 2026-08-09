@@ -50,21 +50,21 @@ const buyerProfiles = [
   <!-- ============================================ -->
   <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
     <div class="max-w-screen-2xl mx-auto">
-      <div class="px-8 py-5 flex items-center justify-between">
-        <div class="flex items-center gap-x-3">
+      <div class="px-4 sm:px-6 lg:px-8 py-4 sm:py-5 flex items-center justify-between gap-3 min-w-0">
+        <div class="flex items-center gap-x-2 sm:gap-x-3 min-w-0">
           <!-- Logo -->
-          <div class="flex items-center gap-x-2.5">
-            <div class="w-9 h-9 bg-icra-teal rounded-2xl flex items-center justify-center shadow-inner">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.25">
+          <div class="flex items-center gap-x-2 sm:gap-x-2.5 min-w-0">
+            <div class="w-8 h-8 sm:w-9 sm:h-9 shrink-0 bg-icra-teal rounded-2xl flex items-center justify-center shadow-inner">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.25">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
               </svg>
             </div>
-            <div>
-              <span class="font-semibold tracking-tighter text-3xl">icra</span>
-              <span class="text-icra-teal font-semibold text-3xl">.systems</span>
+            <div class="min-w-0 leading-none">
+              <span class="font-semibold tracking-tighter text-2xl sm:text-3xl">icra</span>
+              <span class="text-icra-teal font-semibold text-2xl sm:text-3xl">.systems</span>
             </div>
           </div>
-          <div class="premium-badge flex items-center gap-x-1.5 ml-1">
+          <div class="premium-badge hidden sm:flex items-center gap-x-1.5 ml-1 shrink-0">
             <svg class="w-2.5 h-2.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
             <span class="font-semibold tracking-[0.5px] text-[10px]">PREMIUM</span>
           </div>
@@ -78,18 +78,18 @@ const buyerProfiles = [
           <a href="#acquire" class="text-slate-600 hover:text-slate-900 transition-colors">Acquire</a>
         </div>
 
-        <div class="flex items-center gap-x-3">
+        <div class="flex items-center gap-x-2 sm:gap-x-3 shrink-0">
           <a href={mailtoLink}
              class="hidden md:block px-5 py-2.5 text-sm font-semibold bg-white border border-slate-300 hover:border-slate-400 text-slate-700 rounded-3xl transition-all active:scale-[0.985]">
             Make an Offer
           </a>
           <a href={mailtoLink}
-             class="px-6 py-2.5 text-sm font-semibold bg-icra-teal hover:bg-icra-deep text-white rounded-3xl transition-all active:scale-[0.985] shadow-sm flex items-center gap-x-2">
+             class="hidden sm:inline-flex px-5 sm:px-6 py-2.5 text-sm font-semibold bg-icra-teal hover:bg-icra-deep text-white rounded-3xl transition-all active:scale-[0.985] shadow-sm items-center gap-x-2">
             <span>Inquire Now</span>
           </a>
 
           <!-- Mobile menu toggle -->
-          <button class="md:hidden w-10 h-10 flex items-center justify-center text-slate-600" id="mobile-menu-btn">
+          <button type="button" aria-label="Open menu" class="md:hidden w-10 h-10 flex items-center justify-center text-slate-600" id="mobile-menu-btn">
             <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
             </svg>
@@ -117,46 +117,46 @@ const buyerProfiles = [
   <!-- HERO                                         -->
   <!-- ============================================ -->
   <header class="healthcare-gradient text-white">
-    <div class="max-w-screen-2xl mx-auto px-8 pt-16 pb-20 md:pt-20 md:pb-24">
-      <div class="max-w-4xl">
-        <div class="inline-flex items-center gap-x-2 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-3xl mb-6 border border-white/20">
-          <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse-slow"></div>
-          <span class="text-sm font-medium tracking-wide">EXCLUSIVELY AVAILABLE</span>
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 pb-16 sm:pb-20 md:pt-20 md:pb-24">
+      <div class="max-w-4xl min-w-0">
+        <div class="inline-flex items-center gap-x-2 bg-white/10 backdrop-blur-md px-3 sm:px-4 py-1.5 rounded-3xl mb-6 border border-white/20">
+          <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse-slow shrink-0"></div>
+          <span class="text-xs sm:text-sm font-medium tracking-wide">EXCLUSIVELY AVAILABLE</span>
         </div>
 
-        <h1 class="text-6xl md:text-7xl leading-[1.05] tracking-tighter font-semibold mb-4">
+        <h1 class="text-[clamp(2.5rem,12vw,4.5rem)] md:text-7xl leading-[1.05] tracking-tighter font-semibold mb-4 break-words">
           icra.systems
         </h1>
 
-        <p class="max-w-3xl text-2xl md:text-3xl text-teal-100 tracking-tight mb-3">
+        <p class="max-w-3xl text-[clamp(1.25rem,5vw,1.875rem)] md:text-3xl text-teal-100 tracking-tight mb-3">
           The modern brand for ICRA Systems.
         </p>
 
-        <p class="max-w-2xl text-lg text-teal-200/90 mb-9">
+        <p class="max-w-2xl text-base sm:text-lg text-teal-200/90 mb-9">
           Own the .systems domain that positions you as the leader in digital ICRA compliance —
           platforms, monitoring systems, digital permits, checklists, and integrated tools for healthcare construction.
         </p>
 
-        <div class="flex flex-col sm:flex-row gap-4">
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
           <a href={mailtoLink}
-             class="group inline-flex items-center justify-center gap-x-3 px-8 py-4 bg-white text-teal-700 font-semibold text-lg rounded-3xl hover:bg-teal-50 active:bg-white transition-all shadow-xl shadow-black/10">
+             class="group inline-flex items-center justify-center gap-x-3 px-6 sm:px-8 py-3.5 sm:py-4 bg-white text-teal-700 font-semibold text-base sm:text-lg rounded-3xl hover:bg-teal-50 active:bg-white transition-all shadow-xl shadow-black/10">
             <span>Secure This Domain</span>
-            <svg class="w-5 h-5 group-active:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            <svg class="w-5 h-5 shrink-0 group-active:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
           </a>
 
           <a href="#opportunity"
-             class="inline-flex items-center justify-center gap-x-2 px-7 py-4 border border-white/30 hover:bg-white/10 text-white font-medium rounded-3xl transition-all text-lg">
+             class="inline-flex items-center justify-center gap-x-2 px-6 sm:px-7 py-3.5 sm:py-4 border border-white/30 hover:bg-white/10 text-white font-medium rounded-3xl transition-all text-base sm:text-lg">
             <span>Explore the Opportunity</span>
           </a>
         </div>
 
-        <div class="mt-8 flex items-center gap-x-6 text-sm">
-          <div class="flex items-center -space-x-1">
+        <div class="mt-8 flex items-start sm:items-center gap-x-4 sm:gap-x-6 text-sm">
+          <div class="flex items-center -space-x-1 shrink-0">
             <div class="w-6 h-6 bg-white/20 rounded-full border border-white/40"></div>
             <div class="w-6 h-6 bg-white/20 rounded-full border border-white/40"></div>
             <div class="w-6 h-6 bg-white/20 rounded-full border border-white/40"></div>
           </div>
-          <span class="text-teal-200 text-sm">The platform brand modernizing Infection Control Risk Assessment</span>
+          <span class="text-teal-200 text-sm min-w-0">The platform brand modernizing Infection Control Risk Assessment</span>
         </div>
       </div>
     </div>
@@ -166,19 +166,19 @@ const buyerProfiles = [
   <!-- TRUST / STATS BAR                            -->
   <!-- ============================================ -->
   <div class="border-b border-slate-200 bg-white">
-    <div class="max-w-screen-2xl mx-auto px-8 py-5">
-      <div class="flex flex-wrap justify-center md:justify-between items-center gap-x-8 gap-y-4 text-center md:text-left">
-        <div class="flex items-center gap-x-3">
-          <svg class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-          <span class="font-medium text-sm text-slate-600">.systems TLD — signals modern platform & technology</span>
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
+      <div class="flex flex-wrap justify-center md:justify-between items-center gap-x-6 sm:gap-x-8 gap-y-4 text-center md:text-left">
+        <div class="flex items-start sm:items-center gap-x-3 max-w-sm">
+          <svg class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5 sm:mt-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          <span class="font-medium text-sm text-slate-600 min-w-0">.systems TLD — signals modern platform & technology</span>
         </div>
-        <div class="flex items-center gap-x-3">
-          <svg class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-          <span class="font-medium text-sm text-slate-600">Hospitals & contractors need better digital tools for ICRA compliance</span>
+        <div class="flex items-start sm:items-center gap-x-3 max-w-sm">
+          <svg class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5 sm:mt-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          <span class="font-medium text-sm text-slate-600 min-w-0">Hospitals & contractors need better digital tools for ICRA compliance</span>
         </div>
-        <div class="flex items-center gap-x-3">
-          <svg class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-          <span class="font-medium text-sm text-slate-600">Digital ICRA systems reduce risk, paperwork, and inspection failures</span>
+        <div class="flex items-start sm:items-center gap-x-3 max-w-sm">
+          <svg class="w-5 h-5 text-emerald-500 flex-shrink-0 mt-0.5 sm:mt-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          <span class="font-medium text-sm text-slate-600 min-w-0">Digital ICRA systems reduce risk, paperwork, and inspection failures</span>
         </div>
       </div>
     </div>
@@ -187,10 +187,10 @@ const buyerProfiles = [
   <!-- ============================================ -->
   <!-- THE OPPORTUNITY                              -->
   <!-- ============================================ -->
-  <section id="opportunity" class="max-w-screen-2xl mx-auto px-8 pt-16 pb-12">
-    <div class="max-w-3xl mb-10">
+  <section id="opportunity" class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 pb-12">
+    <div class="max-w-3xl mb-10 min-w-0">
       <div class="uppercase tracking-[2px] text-icra-teal text-xs font-semibold mb-2">THE MARKET</div>
-      <h2 class="text-4xl font-bold tracking-tighter leading-tight">ICRA compliance is still largely manual, paper-based, and fragmented — creating major opportunity for modern systems.</h2>
+      <h2 class="text-[clamp(1.75rem,6vw,2.25rem)] md:text-4xl font-bold tracking-tighter leading-tight">ICRA compliance is still largely manual, paper-based, and fragmented — creating major opportunity for modern systems.</h2>
       <p class="mt-4 text-lg text-slate-600">Most ICRA processes today rely on spreadsheets, paper checklists, static PDFs, and manual monitoring. This creates inefficiency, documentation gaps, and increased risk during healthcare construction. Hospitals, general contractors, and specialty contractors are actively seeking digital platforms that can streamline ICRA planning, real-time monitoring, documentation, and compliance reporting. A well-designed ICRA system can significantly reduce risk, improve audit readiness, and create recurring value.</p>
     </div>
 
@@ -218,10 +218,10 @@ const buyerProfiles = [
   <!-- THE BRAND                                    -->
   <!-- ============================================ -->
   <section id="brand" class="bg-white border-y border-slate-200 py-16">
-    <div class="max-w-screen-2xl mx-auto px-8">
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-3xl mb-10">
         <div class="uppercase tracking-[2px] text-icra-teal text-xs font-semibold mb-2">THE ICRA SYSTEMS BRAND</div>
-        <h2 class="text-4xl font-bold tracking-tighter leading-tight">What icra.systems represents.</h2>
+        <h2 class="text-[clamp(1.75rem,6vw,2.25rem)] md:text-4xl font-bold tracking-tighter leading-tight">What icra.systems represents.</h2>
         <p class="mt-4 text-lg text-slate-600">This is the brand for the modern platform or system that digitizes and streamlines Infection Control Risk Assessment — bringing together planning, real-time monitoring, documentation, and compliance into one integrated solution.</p>
       </div>
 
@@ -245,10 +245,10 @@ const buyerProfiles = [
   <!-- ============================================ -->
   <!-- WHY THIS DOMAIN                              -->
   <!-- ============================================ -->
-  <section id="why-domain" class="max-w-screen-2xl mx-auto px-8 py-16">
+  <section id="why-domain" class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
     <div class="max-w-3xl mb-9">
       <div class="uppercase tracking-[2px] text-icra-teal text-xs font-semibold mb-2">THE STRATEGIC ASSET</div>
-      <h2 class="text-4xl font-bold tracking-tighter leading-tight">Why icra.systems is a powerful brand for a platform or SaaS business.</h2>
+      <h2 class="text-[clamp(1.75rem,6vw,2.25rem)] md:text-4xl font-bold tracking-tighter leading-tight">Why icra.systems is a powerful brand for a platform or SaaS business.</h2>
     </div>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -275,10 +275,10 @@ const buyerProfiles = [
   <!-- BUSINESS MODELS (dark)                       -->
   <!-- ============================================ -->
   <section class="bg-slate-900 text-white py-16">
-    <div class="max-w-screen-2xl mx-auto px-8">
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-2xl mb-9">
         <div class="text-teal-400 text-xs tracking-[2px] font-semibold mb-2">BUILD THE PLATFORM</div>
-        <h2 class="text-4xl tracking-tighter font-semibold">High-potential ways to activate icra.systems.</h2>
+        <h2 class="text-[clamp(1.75rem,6vw,2.25rem)] md:text-4xl tracking-tighter font-semibold">High-potential ways to activate icra.systems.</h2>
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -301,9 +301,9 @@ const buyerProfiles = [
   <!-- ============================================ -->
   <!-- WHO IT'S PERFECT FOR                         -->
   <!-- ============================================ -->
-  <section class="max-w-screen-2xl mx-auto px-8 py-16 border-b border-slate-200">
+  <section class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 border-b border-slate-200">
     <div class="max-w-3xl">
-      <h2 class="text-4xl font-bold tracking-tighter leading-tight mb-3">Who should acquire icra.systems?</h2>
+      <h2 class="text-[clamp(1.75rem,6vw,2.25rem)] md:text-4xl font-bold tracking-tighter leading-tight mb-3">Who should acquire icra.systems?</h2>
       <p class="text-lg text-slate-600">This modern .systems domain is ideal for founders and companies ready to build the leading digital platform for ICRA compliance and monitoring.</p>
     </div>
 
@@ -330,14 +330,14 @@ const buyerProfiles = [
   <!-- ============================================ -->
   <!-- FINAL CTA / ACQUIRE                          -->
   <!-- ============================================ -->
-  <section id="acquire" class="max-w-screen-2xl mx-auto px-8 py-20">
+  <section id="acquire" class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20">
     <div class="max-w-2xl mx-auto text-center">
       <div class="inline-block premium-badge mb-4 text-sm">
         <svg class="w-2.5 h-2.5 inline mr-1.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
         EXCLUSIVE OPPORTUNITY
       </div>
 
-      <h2 class="text-5xl tracking-tighter font-semibold mb-4">Own the platform brand for ICRA Systems.</h2>
+      <h2 class="text-[clamp(1.875rem,7vw,3rem)] md:text-5xl tracking-tighter font-semibold mb-4">Own the platform brand for ICRA Systems.</h2>
       <p class="text-xl text-slate-600 max-w-md mx-auto">icra.systems is available for acquisition. Secure the modern .systems domain that positions you as the leader in digital ICRA compliance and monitoring tools.</p>
 
       <div class="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -353,8 +353,8 @@ const buyerProfiles = [
         </a>
       </div>
 
-      <div class="mt-8 text-xs text-slate-500 flex items-center justify-center gap-x-2">
-        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+      <div class="mt-8 text-xs text-slate-500 flex items-start sm:items-center justify-center gap-x-2 px-2">
+        <svg class="w-4 h-4 shrink-0 mt-0.5 sm:mt-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
         <span>Confidential inquiries • Professional escrow transfer • Fast closing available</span>
       </div>
     </div>
@@ -363,18 +363,18 @@ const buyerProfiles = [
   <!-- ============================================ -->
   <!-- STICKY MOBILE CTA                            -->
   <!-- ============================================ -->
-  <div class="sticky-cta fixed bottom-0 left-0 right-0 z-50 sm:hidden px-4 py-3">
+  <div class="sticky-cta fixed bottom-0 left-0 right-0 z-50 sm:hidden px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-3">
     <a href={mailtoLink}
-       class="cta-primary w-full py-3 rounded-full text-white font-semibold text-sm flex items-center justify-center gap-2">
-      INQUIRE TO ACQUIRE — OWN THIS DOMAIN
+       class="cta-primary w-full py-3.5 rounded-full text-white font-semibold text-sm flex items-center justify-center gap-2 text-center leading-snug px-3">
+      Inquire to Acquire
     </a>
   </div>
 
   <!-- ============================================ -->
   <!-- FOOTER                                       -->
   <!-- ============================================ -->
-  <footer class="relative bg-slate-900 text-slate-400">
-    <div class="max-w-screen-2xl mx-auto px-8 py-16">
+  <footer class="relative bg-slate-900 text-slate-400 pb-20 sm:pb-0">
+    <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
       <!-- Footer CTA -->
       <div class="text-center mb-12">
         <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">
