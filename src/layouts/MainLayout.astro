@@ -10,7 +10,7 @@ export interface Props {
 
 const {
   title = "icra.systems — Premium Domain for ICRA Systems | Healthcare Compliance Platform",
-  description = "Acquire icra.systems — the modern .systems domain for ICRA compliance platforms, monitoring systems, and digital tools. The perfect brand for software, SaaS, and integrated systems that streamline Infection Control Risk Assessment in healthcare construction.",
+  description = "Acquire icra.systems, a premium .systems domain for ICRA compliance platforms, monitoring systems, and digital tools for healthcare construction. Price available on request.",
   image = "https://imagedelivery.net/-sPAUAWeA405NiWJ0SNIQA/ccb64e0e-1b98-4243-8d2d-d111a277bb00/public",
   noindex = false,
 } = Astro.props;
@@ -28,6 +28,13 @@ const canonicalURL = new URL(pathname, Astro.site);
 const structuredData = {
   '@context': 'https://schema.org',
   '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': `${siteUrl}/#organization`,
+      name: 'Desert Rich',
+      url: siteUrl,
+      email: contactEmail,
+    },
     {
       '@type': 'WebSite',
       '@id': `${siteUrl}/#website`,
@@ -64,74 +71,12 @@ const structuredData = {
         '@type': 'Offer',
         url: canonicalURL,
         availability: 'https://schema.org/InStock',
-        priceCurrency: 'USD',
-        price: '35000.00',
-        priceSpecification: {
-          '@type': 'PriceSpecification',
-          price: '35000.00',
-          priceCurrency: 'USD',
-          minPrice: '35000.00',
-          maxPrice: '175000.00',
-        },
+        description: 'Price available on request. Flexible, escrow-protected transaction structures are available for qualified buyers.',
         seller: {
           '@type': 'Organization',
           name: 'Desert Rich',
           email: contactEmail,
         },
-        hasMerchantReturnPolicy: {
-          '@type': 'MerchantReturnPolicy',
-          applicableCountry: 'US',
-          returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted',
-          merchantReturnDays: 0,
-          name: 'No Returns',
-          description: 'Due to the nature of digital domain name assets, returns are not applicable after transfer.',
-        },
-        shippingDetails: {
-          '@type': 'OfferShippingDetails',
-          shippingRate: {
-            '@type': 'MonetaryAmount',
-            value: 0,
-            currency: 'USD',
-          },
-          deliveryTime: {
-            '@type': 'ShippingDeliveryTime',
-            handlingTime: {
-              '@type': 'QuantitativeValue',
-              minValue: 1,
-              maxValue: 5,
-              unitCode: 'DAY',
-            },
-            transitTime: {
-              '@type': 'QuantitativeValue',
-              minValue: 0,
-              maxValue: 0,
-              unitCode: 'DAY',
-            },
-          },
-          shippingDestination: {
-            '@type': 'DefinedRegion',
-            addressCountry: 'US',
-          },
-        },
-      },
-      review: {
-        '@type': 'Review',
-        reviewRating: {
-          '@type': 'Rating',
-          ratingValue: '5',
-          bestRating: '5',
-        },
-        author: {
-          '@type': 'Organization',
-          name: 'Desert Rich',
-        },
-      },
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '5',
-        bestRating: '5',
-        ratingCount: 1,
-        reviewCount: 1,
       },
     },
   ],
@@ -143,16 +88,18 @@ const structuredData = {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0f172a" />
+  <meta name="color-scheme" content="light" />
   <title>{title}</title>
   <meta name="description" content={description} />
+  <meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
+  <meta name="author" content="Desert Rich" />
 
   <!-- Google Site Verification -->
   <meta name="google-site-verification" content="d9dn_WtGYmC7K_kpjn15AHqJkBO1A8wtEMv-5rFL1ww" />
 
   <!-- Canonical -->
   <link rel="canonical" href={canonicalURL} />
-
-  {noindex && <meta name="robots" content="noindex" />}
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
